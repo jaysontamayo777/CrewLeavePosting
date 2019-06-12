@@ -1,0 +1,102 @@
+
+<div class="page-header col-xs-12 col-sm-12">
+  <h1 class="header">Detailed</h1>
+</div>
+
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="leaveDateFrom">Leave Date From</label>
+  <div class="input-group">
+    <input type="text" class="form-control" id="leaveDateFrom" name="leaveDateFrom" placeholder="" />
+    <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+  </div>
+</div>
+
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="leaveDateTo">Leave Date To</label>
+  <div class="input-group">
+    <input type="text" class="form-control" id="leaveDateTo" name="leaveDateTo" placeholder="" />
+    <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+  </div>
+</div>
+
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="postedDateFrom">Posted Date From</label>
+  <div class="input-group">
+    <input type="text" class="form-control" id="postedDateFrom" name="postedDateFrom" placeholder="" />
+    <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+  </div>
+</div>
+  
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="postedDateTo">Posted Date To</label>
+  <div class="input-group">
+    <input type="text" class="form-control" id="postedDateTo" name="postedDateTo" placeholder="" />
+    <span class="input-group-addon"><i class="fas fa-calendar-alt"></i></span>
+  </div>
+</div>
+
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="crewName">Name</label>
+  <input type="text" class="form-control" id="crewName" name="crewName" placeholder="" />
+</div>
+
+<div class="form-group col-xs-12 col-sm-6">
+  <label class="control-label" for="crewStatus">Status</label>
+  <select class="form-control" id="crewStatus" name="crewStatus">
+    <option ng-value="" selected></option>
+    <option ng-value="crewStatus">Status 1</option>
+    <option ng-value="crewStatus">Status 2</option>
+    <option ng-value="crewStatus">Status 3</option>
+  </select>
+</div>
+
+<div class="form-group col-xs-12 col-sm-12">
+  <label class="control-label" for="crewName">Name</label>
+  <input type="text" class="form-control" id="crewName" name="crewName" placeholder="" />
+</div>
+
+<div class="form-group col-xs-12 col-sm-12">
+  <label class="control-label" for="crewName">Name</label>
+  <input type="text" class="form-control" id="crewName" name="crewName" placeholder="" />
+</div>
+
+<script>
+    $('#leaveDateFrom').datepicker({
+          format: 'mm/dd/yyyy',
+          autoclose: true,
+    }).on('changeDate', function (selected) {
+       var minDate = new Date(selected.date.valueOf());
+       var fromDate = $("#leaveDateFrom").datepicker('getDate');
+       var toDate = $('#leaveDateTo').datepicker('getDate');
+
+       $('#leaveDateTo').datepicker('setStartDate', minDate); 
+       if (fromDate > toDate){
+          $('#leaveDateTo').datepicker('setDate', minDate);  
+       }    
+    });
+
+    $('#leaveDateTo').datepicker({
+       format: 'mm/dd/yyyy',
+       autoclose: true,
+    });
+
+
+    $('#postedDateFrom').datepicker({
+          format: 'mm/dd/yyyy',
+          autoclose: true,
+    }).on('changeDate', function (selected) {
+       var minDate = new Date(selected.date.valueOf());
+       var fromDate = $('#postedDateFrom').datepicker('getDate');
+       var toDate = $('#postedDateTo').datepicker('getDate');
+
+       $('#postedDateTo').datepicker('setStartDate', minDate); 
+       if (fromDate > toDate){
+          $('#postedDateTo').datepicker('setDate', minDate);  
+       }    
+    });
+
+    $('#postedDateTo').datepicker({
+       format: 'mm/dd/yyyy',
+       autoclose: true,
+    });
+</script>

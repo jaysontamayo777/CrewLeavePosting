@@ -7,25 +7,43 @@
   'use strict';
 
   angular
-    .module('CrewLeavePostingApp')
-    .run(appRun);
+      .module('CrewLeavePostingApp')
+      .config(config);
 
-  /* @ngInject */
-  function appRun(routerHelper) {
-    routerHelper.configureStates(getStates());
+  function config($stateProvider, $urlRouterProvider) {
+    var states = [
+      { 
+        name: 'detailed', 
+        url: '/detailed', 
+        templateUrl: 'views/detailed.html',
+        controller: ''
+      },
+      { 
+        name: 'posting', 
+        url: '/posting', 
+        templateUrl: 'views/posting.html'
+      },
+      { 
+        name: 'retract', 
+        url: '/retract', 
+        templateUrl: 'views/retract.html'
+      },
+      { 
+        name: 'leaveBalances', 
+        url: '/leave-balances', 
+        templateUrl: 'views/leave-balances.html'
+      },
+      { 
+        name: 'masterData', 
+        url: '/master-data', 
+        templateUrl: 'views/master-data.html'
+      },
+    ]
+
+    states.forEach(function(state) {
+      $stateProvider.state(state);
+    });
+
+    $urlRouterProvider.otherwise('/detailed');
   }
-
-  function getStates() {
-    return [
-      {
-        state: 'detailsPage',
-        config: {
-          abstract: true,
-          template: '<div><h1>HELLO WORLD</h1></div>',
-          url: '/person-details'
-        }
-      }
-    ];
-  }
-
 })();

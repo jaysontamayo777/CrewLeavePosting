@@ -11,6 +11,5 @@
   
   angular
     .module('CrewLeavePostingApp', ['ui.router'])
-  
+
 })();
-  
