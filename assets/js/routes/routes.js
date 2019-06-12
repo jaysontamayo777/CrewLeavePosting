@@ -16,7 +16,8 @@
         name: 'detailed', 
         url: '/detailed', 
         templateUrl: 'views/detailed.html',
-        controller: ''
+        controller: 'DetailedController',
+        controllerAs: 'detail'
       },
       { 
         name: 'posting', 
