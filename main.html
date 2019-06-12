@@ -16,11 +16,21 @@
       <div class="row">
         <div class="container-menu">
           <ul class="list-inline">
-            <li role="presentation" class="active"><a href="#!/home">Detailed</a></li>
-            <li role="presentation"><a href="#!/posting">Posting</a></li>
-            <li role="presentation"><a href="#!/retract">Retract</a></li>
-            <li role="presentation"><a href="#!/leave-balances">Leave Balances</a></li>
-            <li role="presentation"><a href="#!/master-data">Master Data</a></li>
+            <li ui-sref-active="active">
+              <a ui-sref="detailed">Detailed</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="posting">Posting</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="retract">Retract</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="leaveBalances">Leave Balances</a>
+            </li>
+            <li ui-sref-active="active">
+              <a ui-sref="masterData">Master Data</a>
+            </li>
           </ul>
         </div>
   
@@ -48,6 +58,10 @@
    <script src="assets/js/crew-leave.module.js"></script>
    <script src="assets/js/routes/routes.js"></script>
    <script src="assets/js/controllers/detailed.controller.js"></script>
+   <script src="assets/js/controllers/leave-balance.controller.js"></script>
+   <script src="assets/js/controllers/master-data.controller.js"></script>
+   <script src="assets/js/controllers/posting.controller.js"></script>
+   <script src="assets/js/controllers/retract.controller.js"></script>
    
    </body>
 

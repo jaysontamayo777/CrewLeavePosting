@@ -1,6 +1,6 @@
 
 /**
- * Routes
+ * @Routes
  */
 
 (function() {
@@ -22,22 +22,30 @@
       { 
         name: 'posting', 
         url: '/posting', 
-        templateUrl: 'views/posting.html'
+        templateUrl: 'views/posting.html',
+        controller: 'PostingController',
+        controllerAs: 'posting'
       },
       { 
         name: 'retract', 
         url: '/retract', 
-        templateUrl: 'views/retract.html'
+        templateUrl: 'views/retract.html',
+        controller: 'RetractController',
+        controllerAs: 'retract'
       },
       { 
         name: 'leaveBalances', 
         url: '/leave-balances', 
-        templateUrl: 'views/leave-balances.html'
+        templateUrl: 'views/leave-balances.html',
+        controller: 'LeaveBalancesController',
+        controllerAs: 'lvbalance'
       },
       { 
         name: 'masterData', 
         url: '/master-data', 
-        templateUrl: 'views/master-data.html'
+        templateUrl: 'views/master-data.html',
+        controller: 'MasterDataController',
+        controllerAs: 'masterdata'
       },
     ]
 
