@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Crew Leave Posting</title>
+   <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/libs/bootstrap/css/bootstrap-datepicker.css">
+   <link rel="stylesheet" href="./assets/libs/bootstrap/css/all.min.css"> <!--load all styles -->
+</head>
+<body>
+   <div ng-app="CrewLeavePostingApp">
+      <nav class="navbar navbar-default">
+         <div class="container">
+            <div class="navbar-header">
+               <a class="navbar-brand" href="/">Angular Routing Example</a>
+            </div>
+
+            <ul class="nav navbar-nav navbar-right">
+               <li><a ui-sref="/person-details"><i class="fa fa-home"></i> Home</a></li>
+               <li><a ui-sref="/person-details"><i class="fa fa-shield"></i> About</a></li>
+               <li><a ui-sref="/person-details"><i class="fa fa-comment"></i> Contact</a></li>
+            </ul>
+         </div>
+      </nav>
+           
+      <div class="container">
+         <div ui-view></div>
+      </div>
+   </div>
+
+   <script src="./assets/libs/jquery-3.3.1.min.js"></script>
+   <script src="./assets/libs/bootstrap/js/bootstrap.min.js"></script>
+   <script src="./assets/libs/bootstrap/js/bootstrap-datepicker.min.js"></script>
+   <script src="./assets/libs/bootstrap/js/all.min.js"></script>
+   <script src="./assets/libs/angular/angular.min.js"></script>
+   <script src="./assets/libs/angular/angular-route.min.js"></script>
+   <script src="./assets/libs/angular/angular-sanitize.js"></script>
+   <script src="./assets/libs/angular/angular-animate.min.js"></script>
+   <script src="./assets/libs/angular/angular-touch.min.js"></script>
+
+   <!-- 
+   - Controllers
+   -
+   -->
+   <script src="./assets/js/crew-leave.module.js"></script>
+   <!-- <script src="./assets/js/routes/routes.js"></script>
+   <script src="./assets/js/routes/router-helper.provider.js"></script> -->
+
+   <!-- 
+   <script>
+      $('#leaveDateFrom').datepicker({
+            format: 'mm/dd/yyyy',
+            autoclose: true,
+      }).on('changeDate', function (selected) {
+         var minDate = new Date(selected.date.valueOf());
+         var fromDate = $("#leaveDateFrom").datepicker('getDate');
+         var toDate = $('#leaveDateTo').datepicker('getDate');
+
+         $('#leaveDateTo').datepicker('setStartDate', minDate); 
+         if (fromDate > toDate){
+            $('#leaveDateTo').datepicker('setDate', minDate);  
+         }    
+      });
+
+      $('#leaveDateTo').datepicker({
+         format: 'mm/dd/yyyy',
+         autoclose: true,
+      });
+
+
+      $('#postedDateFrom').datepicker({
+            format: 'mm/dd/yyyy',
+            autoclose: true,
+      }).on('changeDate', function (selected) {
+         var minDate = new Date(selected.date.valueOf());
+         var fromDate = $('#postedDateFrom').datepicker('getDate');
+         var toDate = $('#postedDateTo').datepicker('getDate');
+
+         $('#postedDateTo').datepicker('setStartDate', minDate); 
+         if (fromDate > toDate){
+            $('#postedDateTo').datepicker('setDate', minDate);  
+         }    
+      });
+
+      $('#postedDateTo').datepicker({
+         format: 'mm/dd/yyyy',
+         autoclose: true,
+      });
+
+
+   </script> -->
+   </body>
+
+</html>
