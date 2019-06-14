@@ -7,16 +7,21 @@
 (function() {
 
   'use strict';
-  
+
   angular
-      .module('CrewLeavePostingApp')
-      .controller('DetailedController', DetailedController);
-  
-      DetailedController.$inject = ['$scope'];
-  
-  function DetailedController($scope) {
+    .module('CrewLeavePostingApp')
+    .controller('LeaveBalancesController', LeaveBalancesController);
+
+  LeaveBalancesController.$inject = ['$scope'];
+
+  function LeaveBalancesController($scope) {
     var vm = this;
 
+    init();
+
+    function init() {
+
+    }
   }
-  
-  })();
+
+})();

@@ -7,16 +7,21 @@
 (function() {
 
   'use strict';
-  
+
   angular
-      .module('CrewLeavePostingApp')
-      .controller('RetractController', RetractController);
-  
-      RetractController.$inject = ['$scope'];
-  
+    .module('CrewLeavePostingApp')
+    .controller('RetractController', RetractController);
+
+  RetractController.$inject = ['$scope'];
+
   function RetractController($scope) {
     var vm = this;
 
+    init();
+
+    function init() {
+
+    }
   }
-  
-  })();
+
+})();

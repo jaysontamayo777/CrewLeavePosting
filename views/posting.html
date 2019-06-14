@@ -1,1 +1,52 @@
-<h1>Posting</h1>
+<div class="posting">
+  <div class="page-header col-xs-12 col-sm-12">
+    <h1 class="header">Posting</h1>
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6">
+    <label class="control-label" for="leaveDateFrom">Leave Date From</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="leaveDateFrom" name="leaveDateFrom" placeholder="" />
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    </div>
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6">
+    <label class="control-label" for="leaveDateTo">Leave Date To</label>
+    <div class="input-group">
+      <input type="text" class="form-control" id="leaveDateTo" name="leaveDateTo" placeholder="" />
+      <span class="input-group-addon"><i class="glyphicon glyphicon-calendar"></i></span>
+    </div>
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6">
+    <label class="control-label" for="crewName">Name</label>
+    <input type="text" class="form-control" id="crewName" name="crewName" placeholder="" />
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-6">
+    <label class="control-label" for="crewStatus">Status</label>
+    <select class="form-control" id="crewStatus" name="crewStatus">
+      <option ng-value="" selected></option>
+      <option ng-value="crewStatus">Status 1</option>
+      <option ng-value="crewStatus">Status 2</option>
+      <option ng-value="crewStatus">Status 3</option>
+    </select>
+  </div>
+
+  <div class="form-group col-xs-12 col-sm-12">
+    <label class="control-label" for="employeeNumber">Employee Number</label>
+    <div class="form-inline-full-width">
+      <div class="row">
+        <div class="form-group col-xs-12 col-sm-6">
+          <label for="first_name" class="sr-only">First Name</label>
+          <input type="text" class="form-control" id="first_name" name="first_name" placeholder="First Name">
+        </div>
+        <div class="form-group col-xs-12 col-sm-6">
+          <button type="button" class="btn btn-success btn-md">Refresh</button>
+          <button type="button" class="btn btn-primary btn-md">Retrieve</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

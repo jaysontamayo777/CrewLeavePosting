@@ -1,4 +1,3 @@
-
 /**
  * @Routes
  */
@@ -7,42 +6,41 @@
   'use strict';
 
   angular
-      .module('CrewLeavePostingApp')
-      .config(config);
+    .module('CrewLeavePostingApp')
+    .config(config);
 
   function config($stateProvider, $urlRouterProvider) {
-    var states = [
-      { 
-        name: 'detailed', 
-        url: '/detailed', 
+    var states = [{
+        name: 'detailed',
+        url: '/detailed',
         templateUrl: 'views/detailed.html',
         controller: 'DetailedController',
-        controllerAs: 'detail'
+        controllerAs: 'detailed'
       },
-      { 
-        name: 'posting', 
-        url: '/posting', 
+      {
+        name: 'posting',
+        url: '/posting',
         templateUrl: 'views/posting.html',
         controller: 'PostingController',
         controllerAs: 'posting'
       },
-      { 
-        name: 'retract', 
-        url: '/retract', 
+      {
+        name: 'retract',
+        url: '/retract',
         templateUrl: 'views/retract.html',
         controller: 'RetractController',
         controllerAs: 'retract'
       },
-      { 
-        name: 'leaveBalances', 
-        url: '/leave-balances', 
+      {
+        name: 'leaveBalances',
+        url: '/leave-balances',
         templateUrl: 'views/leave-balances.html',
         controller: 'LeaveBalancesController',
         controllerAs: 'lvbalance'
       },
-      { 
-        name: 'masterData', 
-        url: '/master-data', 
+      {
+        name: 'masterData',
+        url: '/master-data',
         templateUrl: 'views/master-data.html',
         controller: 'MasterDataController',
         controllerAs: 'masterdata'

@@ -7,16 +7,21 @@
 (function() {
 
   'use strict';
-  
+
   angular
-      .module('CrewLeavePostingApp')
-      .controller('MasterDataController', MasterDataController);
-  
-      MasterDataController.$inject = ['$scope'];
-  
+    .module('CrewLeavePostingApp')
+    .controller('MasterDataController', MasterDataController);
+
+  MasterDataController.$inject = ['$scope'];
+
   function MasterDataController($scope) {
     var vm = this;
 
+    init();
+
+    function init() {
+
+    }
   }
-  
-  })();
+
+})();

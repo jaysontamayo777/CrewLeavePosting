@@ -1,0 +1,7 @@
+.crew-leave-posting .container-view {
+  float: left;
+  width: 100%;
+  border: 1px solid #ddd;
+  border-top: none;
+  padding-bottom: 15px;
+}
