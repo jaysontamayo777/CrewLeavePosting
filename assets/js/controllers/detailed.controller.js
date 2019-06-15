@@ -17,6 +17,23 @@
   function DetailedController($scope) {
     var vm = this;
 
+    vm.dateFromFormat = {
+      format: 'mm/dd/yyyy',
+      autoclose: true,
+    };
+
+    vm.dateToFormat = {
+      format: 'mm/dd/yyyy',
+      autoclose: true,
+    };
+
+    vm.crew = {}
+
+    vm.refreshData = function(crew) {
+      vm.crew = Object.assign({}, crew);
+      console.table(vm.crew);
+    }
+
     init();
 
     function init() {
@@ -26,44 +43,44 @@
     function loadDatePicker() {
       angular.element(document).ready(function() {
         // Leave Date
-        $('#leaveDateFrom').datepicker({
-          format: 'mm/dd/yyyy',
-          autoclose: true,
-        }).on('changeDate', function(selected) {
-          var minDate = new Date(selected.date.valueOf());
-          var fromDate = $('#leaveDateFrom').datepicker('getDate');
-          var toDate = $('#leaveDateTo').datepicker('getDate');
+        // $('#leaveDateFrom').datepicker({
+        //   format: 'mm/dd/yyyy',
+        //   autoclose: true,
+        // }).on('changeDate', function(selected) {
+        //   var minDate = new Date(selected.date.valueOf());
+        //   var fromDate = $('#leaveDateFrom').datepicker('getDate');
+        //   var toDate = $('#leaveDateTo').datepicker('getDate');
 
-          $('#leaveDateTo').datepicker('setStartDate', minDate);
-          if (fromDate > toDate) {
-            $('#leaveDateTo').datepicker('setDate', minDate);
-          }
-        });
+        //   $('#leaveDateTo').datepicker('setStartDate', minDate);
+        //   if (fromDate > toDate) {
+        //     $('#leaveDateTo').datepicker('setDate', minDate);
+        //   }
+        // });
 
-        $('#leaveDateTo').datepicker({
-          format: 'mm/dd/yyyy',
-          autoclose: true,
-        });
+        // $('#leaveDateTo').datepicker({
+        //   format: 'mm/dd/yyyy',
+        //   autoclose: true,
+        // });
 
         // Posted Date
-        $('#postedDateFrom').datepicker({
-          format: 'mm/dd/yyyy',
-          autoclose: true,
-        }).on('changeDate', function(selected) {
-          var minDate = new Date(selected.date.valueOf());
-          var fromDate = $('#postedDateFrom').datepicker('getDate');
-          var toDate = $('#postedDateTo').datepicker('getDate');
+        // $('#postedDateFrom').datepicker({
+        //   format: 'mm/dd/yyyy',
+        //   autoclose: true,
+        // }).on('changeDate', function(selected) {
+        //   var minDate = new Date(selected.date.valueOf());
+        //   var fromDate = $('#postedDateFrom').datepicker('getDate');
+        //   var toDate = $('#postedDateTo').datepicker('getDate');
 
-          $('#postedDateTo').datepicker('setStartDate', minDate);
-          if (fromDate > toDate) {
-            $('#postedDateTo').datepicker('setDate', minDate);
-          }
-        });
+        //   $('#postedDateTo').datepicker('setStartDate', minDate);
+        //   if (fromDate > toDate) {
+        //     $('#postedDateTo').datepicker('setDate', minDate);
+        //   }
+        // });
 
-        $('#postedDateTo').datepicker({
-          format: 'mm/dd/yyyy',
-          autoclose: true,
-        });
+        // $('#postedDateTo').datepicker({
+        //   format: 'mm/dd/yyyy',
+        //   autoclose: true,
+        // });
       });
     }
 
