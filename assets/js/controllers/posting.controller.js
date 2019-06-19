@@ -17,6 +17,8 @@
   function PostingController($scope) {
     var vm = this;
 
+    vm.loadTable = loadTable;
+
     init();
 
     function init() {
@@ -67,6 +69,18 @@
         });
       });
     }
+
+    function loadTable() {
+      angular.element(document).ready(function() {
+        // Data Table
+        $('#example').DataTable({
+          rowReorder: {
+            selector: 'td:nth-child(2)'
+          },
+          responsive: true
+        });
+      });
+    };
   }
 
 })();

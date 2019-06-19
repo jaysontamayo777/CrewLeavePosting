@@ -17,6 +17,8 @@
   function DetailedController($scope) {
     var vm = this;
 
+    vm.loadTable = loadTable;
+
     vm.dateFromFormat = {
       format: 'mm/dd/yyyy',
       autoclose: true,
@@ -40,51 +42,9 @@
       loadDatePicker();
     }
 
-    function loadDatePicker() {
-      angular.element(document).ready(function() {
-        // Leave Date
-        // $('#leaveDateFrom').datepicker({
-        //   format: 'mm/dd/yyyy',
-        //   autoclose: true,
-        // }).on('changeDate', function(selected) {
-        //   var minDate = new Date(selected.date.valueOf());
-        //   var fromDate = $('#leaveDateFrom').datepicker('getDate');
-        //   var toDate = $('#leaveDateTo').datepicker('getDate');
+    function loadDatePicker() {}
 
-        //   $('#leaveDateTo').datepicker('setStartDate', minDate);
-        //   if (fromDate > toDate) {
-        //     $('#leaveDateTo').datepicker('setDate', minDate);
-        //   }
-        // });
-
-        // $('#leaveDateTo').datepicker({
-        //   format: 'mm/dd/yyyy',
-        //   autoclose: true,
-        // });
-
-        // Posted Date
-        // $('#postedDateFrom').datepicker({
-        //   format: 'mm/dd/yyyy',
-        //   autoclose: true,
-        // }).on('changeDate', function(selected) {
-        //   var minDate = new Date(selected.date.valueOf());
-        //   var fromDate = $('#postedDateFrom').datepicker('getDate');
-        //   var toDate = $('#postedDateTo').datepicker('getDate');
-
-        //   $('#postedDateTo').datepicker('setStartDate', minDate);
-        //   if (fromDate > toDate) {
-        //     $('#postedDateTo').datepicker('setDate', minDate);
-        //   }
-        // });
-
-        // $('#postedDateTo').datepicker({
-        //   format: 'mm/dd/yyyy',
-        //   autoclose: true,
-        // });
-      });
-    }
-
-    vm.loadTable = function() {
+    function loadTable() {
       angular.element(document).ready(function() {
         // Data Table
         $('#example').DataTable({
@@ -94,7 +54,7 @@
           responsive: true
         });
       });
-    };
+    }
   }
 
 })();
